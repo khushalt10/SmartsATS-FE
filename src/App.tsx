@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Layout, Briefcase, FileText, Settings, Plus } from 'lucide-react';
 import KanbanBoard from './components/KanbanBoard';
 import AddApplicationModal from './components/AddApplicationModal';
+import ApplicationsList from './components/ApplicationsList';
+import ResumesList from './components/ResumesList';
 
 function App() {
   const [activeTab, setActiveTab] = useState('board');
@@ -68,11 +70,8 @@ function App() {
         {/* Content Area */}
         <div className="flex-1 overflow-x-auto overflow-y-hidden p-6">
           {activeTab === 'board' && <KanbanBoard key={refreshKey} />}
-          {activeTab !== 'board' && (
-            <div className="flex items-center justify-center h-full text-gray-500">
-              Work in progress...
-            </div>
-          )}
+          {activeTab === 'applications' && <ApplicationsList />}
+          {activeTab === 'resumes' && <ResumesList />}
         </div>
 
         {showAddModal && (
