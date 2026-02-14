@@ -18,9 +18,9 @@ export default function Column({ col, applications, onCardClick }: ColumnProps) 
         <div className="flex flex-col w-80 shrink-0">
             <div className="flex items-center justify-between mb-4">
                 <h3 className="font-semibold text-gray-400 uppercase tracking-wider text-sm flex items-center gap-2">
-                    <span className={`w-2 h-2 rounded-full ${col.id === 'applied' ? 'bg-blue-500' :
-                        col.id === 'interview' ? 'bg-yellow-500' :
-                            col.id === 'offer' ? 'bg-green-500' :
+                    <span className={`w-2 h-2 rounded-full ${col.id === 'Applied' ? 'bg-blue-500' :
+                        col.id === 'Interview' ? 'bg-yellow-500' :
+                            col.id === 'Offer' ? 'bg-green-500' :
                                 'bg-red-500'
                         }`} />
                     {col.title}

@@ -9,10 +9,10 @@ import type { Application } from '../types';
 import { fetchApplications, updateApplicationStatus } from '../api';
 
 const defaultCols = [
-    { id: 'applied', title: 'Applied' },
-    { id: 'interview', title: 'Interview' },
-    { id: 'offer', title: 'Offer' },
-    { id: 'rejected', title: 'Rejected' },
+    { id: 'Applied', title: 'Applied' },
+    { id: 'Interview', title: 'Interview' },
+    { id: 'Offer', title: 'Offer' },
+    { id: 'Rejected', title: 'Rejected' },
 ];
 
 export default function KanbanBoard() {
